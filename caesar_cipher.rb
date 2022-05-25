@@ -8,19 +8,19 @@ def caesar_cipher(string, shift)
     # Shift caps/lowers, using the array index and then modulo by length to make sure the letter wrap from z-a. 
     if capitals.include?(value)
       new_string << capitals[((capitals.index(value) + shift) % capitals.length)].chr
-      elsif lowers.include?(value)
-        new_string << lowers[((lowers.index(value) + shift) % lowers.length)].chr
+    elsif lowers.include?(value)
+      new_string << lowers[((lowers.index(value) + shift) % lowers.length)].chr
       # preserve all non-az chars
-      else
-        new_string << value.chr
-      end
+    else
+      new_string << value.chr
+    end
   end
-  return new_string
+  new_string
 end
 
-puts "Enter your message: "
+puts 'Enter your message: '
 string = gets.chomp
-puts "Value to shift by: "
+puts 'Value to shift by: '
 shift = gets.chomp.to_i
-puts "Your ciphered message is: "
+puts 'Your ciphered message is: '
 puts caesar_cipher(string, shift)
