@@ -18,9 +18,9 @@ def caesar_cipher(string, shift)
   new_string
 end
 
-puts 'Enter your message: '
-string = gets.chomp
-puts 'Value to shift by: '
-shift = gets.chomp.to_i
-puts 'Your ciphered message is: '
-puts caesar_cipher(string, shift)
+# puts 'Enter your message: '
+# string = gets.chomp
+# puts 'Value to shift by: '
+# shift = gets.chomp.to_i
+# puts 'Your ciphered message is: '
+# puts caesar_cipher(string, shift)
